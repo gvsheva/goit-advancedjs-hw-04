@@ -1,0 +1,31 @@
+/**
+  |============================
+  | include css partials with
+  | default @import url()
+  |============================
+*/
+/* Common styles */
+@import url('./reset.css');
+@import url('./base.css');
+@import url('./container.css');
+@import url('./animations.css');
+
+/* Sections style */
+@import url('./header.css');
+@import url('./back-link.css');
+
+@import url('./button.css');
+@import url('./gallery.css');
+@import url('./searching-form.css');
+@import url('./loader.css');
+
+@import url('simplelightbox/dist/simple-lightbox.min.css');
+@import url('izitoast/dist/css/iziToast.min.css');
+
+[data-hidden='true'] {
+  display: none;
+}
+
+button#load-more {
+  margin: 0 auto;
+}

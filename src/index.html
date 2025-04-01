@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HW4</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
+
+    <main>
+      <section class="container">
+        <form class="form" id="searching-form">
+          <div class="search-input-group">
+            <div class="input-group">
+              <input
+                id="search"
+                name="search"
+                type="text"
+                placeholder="Type your search..."
+              />
+            </div>
+
+            <button type="submit">Search</button>
+          </div>
+
+          <input type="checkbox" id="show-options" hidden />
+          <label for="show-options" class="toggle-label"
+            >Show advanced options</label
+          >
+
+          <div class="options">
+            <fieldset>
+              <legend>Orientation</legend>
+              <div class="radio-group">
+                <input
+                  type="radio"
+                  name="orientation"
+                  id="orientation-horizontal"
+                  value="horizontal"
+                  checked
+                />
+                <label for="orientation-horizontal">Horizontal</label>
+
+                <input
+                  type="radio"
+                  name="orientation"
+                  id="orientation-vertical"
+                  value="vertical"
+                />
+                <label for="orientation-vertical">Vertical</label>
+              </div>
+            </fieldset>
+
+            <div class="checkbox-group">
+              <input
+                type="checkbox"
+                name="safesearch"
+                checked
+                id="safesearch"
+              />
+              <label for="safesearch">Enable Safe Search</label>
+            </div>
+
+            <div class="select-group">
+              <label for="type">Image type</label>
+              <select name="type" id="type">
+                <option value="all">All</option>
+                <option value="photo">Photo</option>
+                <option value="illustration">Illustration</option>
+                <option value="vector">Vector</option>
+              </select>
+            </div>
+          </div>
+        </form>
+        <ul id="gallery" class="gallery"></ul>
+        <button type="button" id="load-more" data-hidden="true">
+          Load more
+        </button>
+        <span class="loader" id="loader" data-hidden="true"></span>
+      </section>
+    </main>
+
+    <script src="./main.js" type="module"></script>
+  </body>
+</html>
